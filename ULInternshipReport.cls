@@ -168,6 +168,7 @@
 }
 
 % Definition of the functions to set the title page parameters
+\def\SetAbstract#1{\def\Abstract{#1}}
 \def\SetCompanyName#1{\def\CompanyName{#1}}
 \def\SetCourseName#1{\def\CourseName{#1}}
 \def\SetCourseNumber#1{\def\CourseNumber{#1}}
@@ -181,8 +182,10 @@
 \def\SetStudentNumber#1{\def\StudentNumber{#1}}
 \def\SetSupervisorName#1{\def\SupervisorName{#1}}
 \def\SetSupervisorTitle#1{\def\SupervisorTitle{#1}}
+\def\SetThanks#1{\def\Thanks{#1}}
 
 % Definition of the default title page parameters
+\def\Abstract{Abstract}
 \def\CompanyName{Company Name}
 \def\CourseName{Course Name}
 \def\CourseNumber{Course Number}
@@ -196,6 +199,30 @@
 \def\StudentNumber{Student Number}
 \def\SupervisorName{Supervisor Name}
 \def\SupervisorTitle{Supervisor Title}
+\def\Thanks{Thanks}
+
+% Definition of the function to create the abstract
+\def\makeabstract{%
+    \newpage
+    \thispagestyle{empty}
+    \vspace*{4cm}
+    \begin{center}%
+        \Large\bfseries R\'{e}sum\'{e}
+    \end{center}%
+%
+    \begin{center}
+        \emph{\Abstract}
+    \end{center}
+}
+
+\def\makethanks{%
+    \newpage
+    \thispagestyle{empty}
+    \vspace*{4cm}
+    \begin{center}
+        \emph{\Thanks}
+    \end{center}
+}
 
 % Definition of the maximum hierarchic level covered by the table of contents
 \setcounter{tocdepth}{3}            % default = 2
@@ -224,6 +251,14 @@
 % Generates title page
 \AtBeginDocument{%
    \maketitle
+}
+
+\AtBeginDocument{%
+    \makeabstract
+}
+
+\AtBeginDocument{%
+    \makethanks
 }
 
 % Table of contents, list of figures and list of tables generation
