@@ -4,7 +4,7 @@
 % ----------------------------------- Identification -----------------------------------
 % --------------------------------------------------------------------------------------
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{ULrapport}[2016/08/12 - Rapport de stage (Université Laval)]
+\ProvidesClass{ULInternshipReport}[2016/08/12 - Rapport de stage - Université Laval]
 
 
 % --------------------------------------------------------------------------------------
@@ -20,8 +20,8 @@
 % --------------------------------------------------------------------------------------
 % ------------------------------- Declaration of options -------------------------------
 % --------------------------------------------------------------------------------------
-\DeclareOption{lof}{\setboolean{InsertFiguresList}
-\DeclareOption{lot}{\setboolean{InsertTablesList}
+\DeclareOption{lof}{\setboolean{InsertFiguresList}{true}}
+\DeclareOption{lot}{\setboolean{InsertTablesList}{true}}
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{report}}
 
 
@@ -108,12 +108,13 @@
 
         \begin{minipage}{.45\linewidth}
             \begin{flushleft}
-                \includegraphics[width=12em]{ul_logo}
+                \includegraphics[width=12em]{ul_logo} \\
+                \textbf{Facult\'{e} des sciences et g\'{e}nie}
             \end{flushleft}
-        \end{minipage}
-
+        \end{minipage}%
+%
         \hfill
-
+%
         \begin{minipage}{.45\linewidth}
             \begin{flushright}
                 \CourseName   \\
@@ -121,12 +122,12 @@
                 \Session      \\
                 \ProgramName
             \end{flushright}
-        \end{minipage}
+        \end{minipage}%
 
         \vspace*{\stretch{2}}
 
         \begin{center}
-            \parbox{\textwidth}{\centering\Large\bfseries \InternTitle - \CompanyName} \\[5ex]
+            \parbox{\textwidth}{\centering\Large\bfseries \InternTitle~-~\CompanyName} \\[5ex]
             \parbox{\textwidth}{\centering\large\bfseries \ReportType}                 \\
 
             \vspace*{\stretch{2}}
@@ -141,22 +142,25 @@
             \ReportDeliveryDate
         \end{flushleft}
 
-        \hline
+        \rule{\textwidth}{1pt}
+
+        \vspace*{1cm}
 
         \begin{minipage}{.45\linewidth}
             \begin{flushleft}
                 \StudentName \\
                 \StudentNumber
             \end{flushleft}
-        \end{minipage}
-
+        \end{minipage}%
+%
         \hfill
-
+%
         \begin{minipage}{.45\linewidth}
             \begin{flushright}
-                \SupervisorName
+                \SupervisorName \\
+                \SupervisorTitle
             \end{flushright}
-        \end{minipage}
+        \end{minipage}%
 
     \end{titlepage}%
 
