@@ -120,32 +120,32 @@
                 \CourseName   \\
                 \CourseNumber \\
                 \Session      \\
-                \ProgramName
+                \ProgramName  \\
+                Remis le \ReportDeliveryDate
             \end{flushright}
         \end{minipage}%
-
-        \vspace*{\stretch{2}}
-
+%
+        \vspace*{\stretch{1}}
+%
         \begin{center}
-            \parbox{\textwidth}{\centering\Large\bfseries \InternTitle~-~\CompanyName} \\[5ex]
+            \rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt} % Thick horizontal line
+            \rule{\textwidth}{0.4pt}\\[\baselineskip] % Thin horizontal line
+%
+            \parbox{\textwidth}{\centering\Large\bfseries \InternTitle~chez~\emph{\CompanyName}} \\[5ex]
             \parbox{\textwidth}{\centering\large\bfseries \ReportType}                 \\
-
+%
+            \rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt} % Thin horizontal line
+            \rule{\textwidth}{1.6pt}\\[\baselineskip] % Thick horizontal line
+%
             \vspace*{\stretch{2}}
-
-            \parbox{\textwidth}{\centering\bfseries Destinataire} \\
-            \parbox{\textwidth}{\centering\bfseries \Destination}
+%
+            \parbox{\textwidth}{\centering\bfseries Destinataire:} \\
+            \vspace*{0.5cm}
+            \parbox{\textwidth}{\centering \emph{\Destination}}
         \end{center}
-
-        \vspace*{\stretch{2}}
-
-        \begin{flushleft}
-            \ReportDeliveryDate
-        \end{flushleft}
-
-        \rule{\textwidth}{1pt}
-
+%
         \vspace*{1cm}
-
+%
         \begin{minipage}{.45\linewidth}
             \begin{flushleft}
                 \StudentName \\
@@ -161,7 +161,6 @@
                 \SupervisorTitle
             \end{flushright}
         \end{minipage}%
-
     \end{titlepage}%
 
     \clearpage%
