@@ -100,20 +100,68 @@
 
 % Title page definition
 \renewcommand{\maketitle}{%
-   \thispagestyle{empty}%
-   \pagenumbering{roman}%
-   \begin{titlepage}%
-      \setcounter{page}{999}%                      % associe le numero "0" a la page titre
+    \thispagestyle{empty}%
+    \pagenumbering{roman}%
 
-      \begin{flushleft}
-         \includegraphics[width=12em]{ul_logo}
-      \end{flushleft}\par
+    \begin{titlepage}%
+        \setcounter{page}{999}%                      % Associate the number '0' to the title page
 
-      \vspace*{\stretch{2}}
+        \begin{minipage}{.45\linewidth}
+            \begin{flushleft}
+                \includegraphics[width=12em]{ul_logo}
+            \end{flushleft}
+        \end{minipage}
 
-   \end{titlepage}%
-   \clearpage%
-   \let\maketitle\relax%
+        \hfill
+
+        \begin{minipage}{.45\linewidth}
+            \begin{flushright}
+                \CourseName   \\
+                \CourseNumber \\
+                \Session      \\
+                \ProgramName
+            \end{flushright}
+        \end{minipage}
+
+        \vspace*{\stretch{2}}
+
+        \begin{center}
+            \parbox{\textwidth}{\centering\Large\bfseries \InternTitle - \CompanyName} \\[5ex]
+            \parbox{\textwidth}{\centering\large\bfseries \ReportType}                 \\
+
+            \vspace*{\stretch{2}}
+
+            \parbox{\textwidth}{\centering\bfseries Destinataire} \\
+            \parbox{\textwidth}{\centering\bfseries \Destination}
+        \end{center}
+
+        \vspace*{\stretch{2}}
+
+        \begin{flushleft}
+            \ReportDeliveryDate
+        \end{flushleft}
+
+        \hline
+
+        \begin{minipage}{.45\linewidth}
+            \begin{flushleft}
+                \StudentName \\
+                \StudentNumber
+            \end{flushleft}
+        \end{minipage}
+
+        \hfill
+
+        \begin{minipage}{.45\linewidth}
+            \begin{flushright}
+                \SupervisorName
+            \end{flushright}
+        \end{minipage}
+
+    \end{titlepage}%
+
+    \clearpage%
+    \let\maketitle\relax%
 }
 
 % Definition of the functions to set the title page parameters
