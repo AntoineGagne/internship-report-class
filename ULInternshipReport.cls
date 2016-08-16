@@ -36,11 +36,13 @@
 % --------------------------------------------------------------------------------------
 \LoadClass{report}
 
+\RequirePackage{fancyhdr}
 \RequirePackage{geometry}
 \RequirePackage{lmodern}
 \RequirePackage[T1]{fontenc}
 \RequirePackage[USenglish,french]{babel}
 \RequirePackage{caption}
+\RequirePackage{ragged2e}
 \RequirePackage{textcomp}        % For \textcelsius, \textmu, \textohm
 \RequirePackage{array}
 \RequirePackage{amstext}         % For \text
@@ -92,7 +94,15 @@
 
 
 % Header and footer by default
-\pagestyle{headings}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE, LO]{\ProgramName}
+\fancyhead[CE, CO]{\CourseName}
+\fancyhead[RE, RO]{\ReportType}
+\fancyfoot[CE, CO]{\leftmark}
+\fancyfoot[RE, RO]{\thepage}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
 
 
 % Definition of the default graphics path
@@ -209,19 +219,17 @@
     \begin{center}%
         \Large\bfseries R\'{e}sum\'{e}
     \end{center}%
-%
-    \begin{center}
-        \emph{\Abstract}
-    \end{center}
+
+    \justify
+    \Abstract
 }
 
 \def\makethanks{%
     \newpage
     \thispagestyle{empty}
     \vspace*{4cm}
-    \begin{center}
-        \emph{\Thanks}
-    \end{center}
+    \justify
+    \emph{\Thanks}
 }
 
 % Definition of the maximum hierarchic level covered by the table of contents
