@@ -131,7 +131,7 @@
                 \CourseNumber \\
                 \Session      \\
                 \ProgramName  \\
-                Remis le \ReportDeliveryDate
+                \ReportDeliveryDate
             \end{flushright}
         \end{minipage}%
 %
@@ -213,23 +213,16 @@
 
 % Definition of the function to create the abstract
 \def\makeabstract{%
-    \newpage
-    \thispagestyle{empty}
-    \vspace*{4cm}
-    \begin{center}%
-        \Large\bfseries R\'{e}sum\'{e}
-    \end{center}%
-
-    \justify
-    \Abstract
+    \begin{abstract}
+        \Abstract
+    \end{abstract}
 }
 
 \def\makethanks{%
-    \newpage
-    \thispagestyle{empty}
-    \vspace*{4cm}
-    \justify
-    \emph{\Thanks}
+    \renewcommand{\abstractname}{Remerciements}
+    \begin{abstract}
+        \Thanks
+    \end{abstract}
 }
 
 % Definition of the maximum hierarchic level covered by the table of contents
