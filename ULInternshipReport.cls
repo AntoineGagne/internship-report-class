@@ -55,6 +55,7 @@
 \RequirePackage{ragged2e}
 \RequirePackage{rotating}
 \RequirePackage{tabularx}
+\RequirePackage{titlesec}
 \RequirePackage{textcomp}        % For \textcelsius, \textmu, \textohm
 
 
@@ -277,11 +278,21 @@
 \renewcommand\lstlistlistingname{Liste des programmes}
 \renewcommand\lstlistingname{Programme}
 
+% Changes the way the chapter are displayed
+\titleformat{\chapter}[display]
+  {\bfseries\Large}
+  {\filright\MakeUppercase{\chaptertitlename} \Huge\thechapter}
+  {1ex}
+  {\titlerule\vspace{1ex}\filleft}
+  [\vspace{1ex}\titlerule]
+
 % Definition of `hyperref` parameters
 \AtBeginDocument{%
    \hypersetup{pdftitle={\CourseName},%
                pdfsubject={\ReportType},%
-               pdfauthor={\StudentName - \StudentNumber}}%
+               pdfauthor={\StudentName~(\StudentNumber)},%
+               pdfcreator={pdflatex},%
+               pdfkeywords={rapport, stage}}%
 }
 
 % Selection of `babel` language by default
