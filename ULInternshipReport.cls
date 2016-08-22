@@ -152,7 +152,7 @@
 %
             \vspace*{\stretch{2}}
 %
-            \parbox{\textwidth}{\centering\bfseries Destinataire:} \\
+            \parbox{\textwidth}{\centering\bfseries Destinataire} \\
             \vspace*{0.5cm}
             \parbox{\textwidth}{\centering \emph{\Destination}}
         \end{center}
