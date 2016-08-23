@@ -223,11 +223,25 @@
     \end{abstract}
 }
 
+% Defines an acknowledgments environment
+\def\acknowledgmentsname#1{\def\theacknowledgmentsname{#1}}
+\def\theacknowledgmentsname{Remerciements}
+\newenvironment{acknowledgments}%
+        {%
+            \renewcommand{\abstractname}{\theacknowledgmentsname}%
+            \begin{abstract}%
+        }%
+        {%
+            \end{abstract}%
+            \clearpage%
+        }%
+
+
+
 \def\makethanks{%
-    \renewcommand{\abstractname}{Remerciements}
-    \begin{abstract}
+    \begin{acknowledgments}
         \Thanks
-    \end{abstract}
+    \end{acknowledgments}
 }
 
 % Definition of the maximum hierarchic level covered by the table of contents
