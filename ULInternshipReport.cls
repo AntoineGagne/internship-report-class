@@ -45,6 +45,7 @@
 \RequirePackage{array}
 \RequirePackage{caption}
 \RequirePackage{colortbl}
+\RequirePackage{etoolbox}
 \RequirePackage{fancyhdr}
 \RequirePackage{geometry}
 \RequirePackage{graphicx}
@@ -341,4 +342,15 @@
    \cleardoublepage%
    \setcounter{page}{1}%
    \pagenumbering{arabic}%
+}
+
+% Redefine the appendix page numbering format
+\let\origappendix\appendix
+\renewcommand\appendix{%
+    \origappendix
+    \pretocmd{\chapter}{%
+      \clearpage
+      \pagenumbering{arabic}%
+      \renewcommand*{\thepage}{\thechapter\arabic{page}}%
+    }{}{}
 }
