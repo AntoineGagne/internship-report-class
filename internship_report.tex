@@ -1,10 +1,14 @@
 %!TEX encoding = UTF-8 Unicode
 
-\documentclass[12pt, lof, lot]{ULInternshipReport}
+% `lof` is to add the list of figures
+% `lot` is to add the list of tables
+% `lol` is to add the list of programs
+\documentclass[12pt, lof, lot, lol]{ULInternshipReport}
 
 \usepackage[utf8]{inputenc}
 \usepackage{lipsum}
 
+% The different parameters to set the title page
 \SetCompanyName{Optel Vision}
 \SetCourseName{Stage en génie logiciel I}
 \SetCourseNumber{GLO-2580 (56499)}
@@ -19,7 +23,9 @@
 \SetSupervisorName{Éric Pinet}
 \SetSupervisorTitle{Chef d'équipe de l'équipe d'outils}
 
+% To set the abstract page
 \SetAbstract{\lipsum[3-6]}
+% To set the acknowledgment page
 \SetThanks{\lipsum[3-6]}
 
 \begin{document}
@@ -29,6 +35,14 @@
 
 \chapter{This is another example}
 \lipsum
+
+\begin{lstlisting}[language=Python,%
+                   label={code:dummy_example},%
+                   caption={A dummy example}]
+    if __name__ == '__main__':
+        name = input('Who are you?')
+        print('Hello {0}'.format(name))
+\end{lstlisting}
 
 \appendix
 

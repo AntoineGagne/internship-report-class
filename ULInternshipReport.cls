@@ -56,8 +56,9 @@
 \RequirePackage{ragged2e}
 \RequirePackage{rotating}
 \RequirePackage{tabularx}
-\RequirePackage{titlesec}
 \RequirePackage{textcomp}        % For \textcelsius, \textmu, \textohm
+\RequirePackage{titlesec}
+\RequirePackage{xcolor}
 
 
 %--------------------------------------------------------------------------------------
