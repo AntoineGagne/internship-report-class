@@ -124,8 +124,8 @@
 
         \begin{minipage}{.45\linewidth}
             \begin{flushleft}
-                \includegraphics[width=12em]{ul_logo} \\
-                \textbf{Facult\'{e} des sciences et g\'{e}nie}
+                \includegraphics[width=15em]{ul_logo} \\
+                \textsc{Facult\'{e} des sciences et g\'{e}nie}
             \end{flushleft}
         \end{minipage}%
 %
@@ -137,7 +137,7 @@
                 \CourseNumber \\
                 \Session      \\
                 \ProgramName  \\
-                \ReportDeliveryDate
+                \today
             \end{flushright}
         \end{minipage}%
 %
@@ -191,7 +191,6 @@
 \def\SetDestination#1{\def\Destination{#1}}
 \def\SetInternTitle#1{\def\InternTitle{#1}}
 \def\SetProgramName#1{\def\ProgramName{#1}}
-\def\SetReportDeliveryDate#1{\def\ReportDeliveryDate{#1}}
 \def\SetReportType#1{\def\ReportType{#1}}
 \def\SetSession#1{\def\Session{#1}}
 \def\SetStudentName#1{\def\StudentName{#1}}
@@ -208,7 +207,6 @@
 \def\Destination{Destination}
 \def\InternTitle{Intern Title}
 \def\ProgramName{Program Name}
-\def\ReportDeliveryDate{Report Delivery Date}
 \def\ReportType{Report Type}
 \def\Session{Session}
 \def\StudentName{Student Name}
@@ -236,8 +234,6 @@
             \end{abstract}%
             \clearpage%
         }%
-
-
 
 \def\makethanks{%
     \begin{acknowledgments}
