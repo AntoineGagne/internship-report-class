@@ -4,7 +4,7 @@
 % ----------------------------------- Identification -----------------------------------
 % --------------------------------------------------------------------------------------
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{ULInternshipReport}[2016/08/12 - Rapport de stage - Université Laval]
+\ProvidesClass{ulinternshipreport}[2016/08/12 --- Rapport de stage --- Université Laval]
 
 
 % --------------------------------------------------------------------------------------
